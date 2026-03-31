@@ -1,5 +1,5 @@
 .page {
-  --background: #fafafa;
+  --background: #d0b1a6;
   --foreground: #fff;
 
   --text-primary: #000;
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: var(--foreground);
+
   padding: 120px 60px;
 }
 
@@ -123,7 +123,7 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
   }
@@ -139,4 +139,4 @@ a.secondary {
     --button-secondary-hover: #1a1a1a;
     --button-secondary-border: #1a1a1a;
   }
-}
+} */

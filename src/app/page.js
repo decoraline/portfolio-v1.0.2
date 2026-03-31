@@ -1,18 +1,22 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import UnicornScene from "unicornstudio-react/next";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <UnicornScene
+        projectId="VIHBqP1DHcPofDoYf3Ox"
+        width="100vw"
+        height="100vh"
+        scale={1}
+        dpi={1.5}
+        fps={60}
+        lazyLoad={true}
+        production={true}
+      />
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
         <div className={styles.intro}>
           <h1>To get started, edit the page.js file.</h1>
           <p>
