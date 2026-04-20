@@ -29,6 +29,7 @@ const projects = [
       "Unicorn Studio",
       "Aceternity",
     ],
+    width: "col-span-2",
   },
   {
     category: "Web Development",
@@ -74,6 +75,7 @@ const projects = [
       "This project is part of a retro-inspired personal website built with Next.js and React. It stores book data in a consistent model and offers filtering by genre and rating. Users can switch between a grid and list view; each card includes the book cover, information about the book, star ratings, and an expandable review. The layout emphasizes maintainability with the useMemo Hook.",
     href: "https://decoraline.neocities.org/reviews-books",
     stack: ["Next.js", "React", "CSS", "JavaScript", "Git"],
+    width: "col-span-2",
   },
   {
     category: "Web Development",
@@ -89,6 +91,7 @@ const projects = [
       "This project is part of a retro-inspired personal website built with Next.js and React. This site organizes content into a three-column layout: a left sidebar, a central column for the main content of the website, and a right sidebar. Each column consisting of content that shows off my personality and creativity with some fun interactive iframes/widgets for visitors. The design features reusable components making the site easy to maintain and expand upon.",
     href: "https://decoraline.neocities.org/home",
     stack: ["Next.js", "React", "CSS", "JavaScript", "Git"],
+    width: "col-span-2",
   },
   {
     category: "Web Development",
@@ -136,14 +139,14 @@ export default function ProjectCards() {
 
   return (
     <section className="w-full py-16 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-[1600] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, idx) => (
-          <div key={idx} className="flex flex-col">
-            <div
+          <div key={idx} className={`flex flex-col ${project.width}`}>
+            {/* <div
               className={`self-start mb-2 px-3 py-1 rounded-full border text-xs font-semibold tracking-widest ${project.categoryColor}`}
             >
               {project.category}
-            </div>
+            </div> */}
 
             <div
               className={`card-ring rounded-2xl border border-gray-200 bg-white flex flex-col flex-1 transition-transform duration-300 hover:scale-[1.02]`}
@@ -158,7 +161,7 @@ export default function ProjectCards() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-contain p-6"
+                    className="object-fit object-cover object-top"
                   />
                 </div>
                 <div className="p-4 flex flex-col flex-1">

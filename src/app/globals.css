@@ -223,3 +223,13 @@ body {
   opacity: 1;
   animation-play-state: running;
 }
+
+[class*="dark:bg-transparent"] {
+  a span {
+    color: black !important;
+  }
+}
+
+.projects {
+  width: 100%;
+}

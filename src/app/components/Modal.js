@@ -41,11 +41,30 @@ const Modal = ({ onClose, project, onNext, onPrev, clickPosition }) => {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-body">
           <section>
-            <p className="category">{project.category}</p>
+            <p className="category text-black-600 font-bold">
+              {project.category}
+            </p>
 
             <h1>{project.title}</h1>
 
             <p className="subtitle">{project.subtitle}</p>
+          </section>
+
+          <section>
+            <h2 className="font-bold text-black-600 text-lg">Overview</h2>
+            <p className="text-black-600 font-light">{project.overview}</p>
+          </section>
+
+          <section>
+            <h2 className="font-bold text-black-600 text-lg mb-2">
+              Tech Stack
+            </h2>
+
+            <div className=" stack">
+              {project.stack?.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
           </section>
 
           <section>
@@ -54,21 +73,6 @@ const Modal = ({ onClose, project, onNext, onPrev, clickPosition }) => {
               alt={project.title}
               className="modal-image"
             />
-          </section>
-
-          <section>
-            <h2 className="font-bold text-black-600 text-lg">Overview</h2>
-            <p className="text-gray-700">{project.overview}</p>
-          </section>
-
-          <section>
-            <h2>Tech Stack</h2>
-
-            <div className="stack">
-              {project.stack?.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
           </section>
         </div>
 

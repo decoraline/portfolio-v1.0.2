@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import UnicornWrapper from "./components/UnicornWrapper";
 import ProjectCards from "./components/ProjectCards";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,11 @@ export default function Home() {
           <ProjectCards />
         </div>
       </main>
+      <footer className="w-full">
+        <div id="footer">
+          <Footer />
+        </div>
+      </footer>
     </div>
   );
 }

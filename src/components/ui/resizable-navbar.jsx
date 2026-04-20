@@ -30,7 +30,10 @@ export const Navbar = ({ children, className }) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("fixed inset-x-0 top-20 z-[999999999] w-full", className)}
+      className={cn(
+        "fixed inset-x-0 top-[24px] z-[999999999] w-full",
+        className,
+      )}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -78,7 +81,7 @@ export const NavItems = ({ items, className, onItemClick }) => {
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-end pr-[24px] space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
     >
