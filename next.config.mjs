@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  transpilePackages: ["unicornstudio-react"],
   reactCompiler: true,
+  experimental: {
+    optimizePackageImports: ["unicornstudio-react"],
+  },
 };
 
 export default nextConfig;

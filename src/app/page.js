@@ -1,68 +1,15 @@
-"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import UnicornScene from "unicornstudio-react/next";
+import UnicornWrapper from "./components/UnicornWrapper";
+import ProjectCards from "./components/ProjectCards";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <UnicornScene
-        projectId="VIHBqP1DHcPofDoYf3Ox"
-        width="100vw"
-        height="100vh"
-        scale={1}
-        dpi={1.5}
-        fps={60}
-        lazyLoad={true}
-        production={true}
-      />
+      <UnicornWrapper />
       <main className={styles.main}>
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div id="projects">
+          <ProjectCards />
         </div>
       </main>
     </div>

@@ -15,16 +15,22 @@ import { useState } from "react";
 export function SiteNavbar() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Projects",
+      link: "#projects",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Resume",
+      link: "https://drive.google.com/file/d/1IDvkZzL66erSWNwpFEM0LobhFfRFzEMW/view?usp=sharing",
+      target: "_blank",
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/decayla-anthony/",
+      target: "_blank",
     },
     {
       name: "Contact",
-      link: "#contact",
+      link: "mailto:decaylaanthony@gmail.com",
     },
   ];
 
@@ -37,10 +43,10 @@ export function SiteNavbar() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             <NavbarButton variant="secondary">Login</NavbarButton>
             <NavbarButton variant="primary">Book a call</NavbarButton>
-          </div>
+          </div> */}
         </NavBody>
 
         {/* Mobile Navigation */}

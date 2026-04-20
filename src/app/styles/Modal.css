@@ -1,0 +1,48 @@
+.modal-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fe4a22;
+}
+.modal-wrapper {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.modal-wrapper button:hover {
+  background: #8290b7;
+  color: white;
+  outline-color: #8290b7;
+}
+
+.modal-content {
+  background: #ba8a94;
+  color: black;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h1 {
+  font-size: 24px;
+  font-weight: 450;
+  color: white;
+  letter-spacing: -0.06em;
+  font-family: "Poppins", "sans-serif";
+  padding: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .modal-content h1 {
+    padding-top: 40px;
+    font-size: 54px;
+    padding-inline: 20px;
+  }
+}
