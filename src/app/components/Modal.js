@@ -57,8 +57,8 @@ const Modal = ({ onClose, project, onNext, onPrev, clickPosition }) => {
           </section>
 
           <section>
-            <h2>Overview</h2>
-            <p>{project.overview}</p>
+            <h2 className="font-bold text-black-600 text-lg">Overview</h2>
+            <p className="text-gray-700">{project.overview}</p>
           </section>
 
           <section>
