@@ -1,16 +1,32 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
+import {
+  Cormorant_Garamond,
+  Space_Grotesk,
+  Instrument_Serif,
+} from "next/font/google";
 import "./globals.css";
 import { SiteNavbar } from "@/components/ui/site-navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
+  display: "swap",
 });
 
 export const metadata = {
@@ -18,21 +34,14 @@ export const metadata = {
   description: "decayla's portfolio website",
 };
 
-const themeInitScript = `(function(){try{var m=window.matchMedia("(prefers-color-scheme: dark)");function d(){document.documentElement.classList.toggle("dark",m.matches)}d();m.addEventListener("change",d)}catch(e){}})();`;
-
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${cormorant.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
-      <body className={geistSans.className}>
-        <Script
-          id="theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: themeInitScript }}
-        />
+      <body>
         <SiteNavbar />
         {children}
       </body>
