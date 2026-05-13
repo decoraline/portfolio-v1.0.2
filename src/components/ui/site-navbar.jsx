@@ -56,7 +56,7 @@ export function SiteNavbar() {
               target={item.target}
               rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block rounded-xl px-5 py-3 font-sans text-[0.95rem] font-normal text-[var(--text-inv)] transition-colors hover:bg-white/10"
+              className="block rounded-xl px-5 py-3 font-sans text-[0.95rem] font-normal text-[var(--text-inv)] transition-colors hover:bg-white/10 z-[]"
             >
               {item.name}
             </a>

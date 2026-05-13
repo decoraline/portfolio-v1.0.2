@@ -159,3 +159,35 @@ input::placeholder,
 textarea::placeholder {
   color: oklch(42% 0.01 20);
 }
+
+div:has(> canvas) {
+  position: relative;
+  &::after {
+    content: "";
+    background: var(--dark);
+    display: block;
+    width: 100%;
+    height: var(--offset);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 99999999999999999999;
+  }
+}
+
+div:has(> div:has(> canvas)) {
+  display: none;
+}
+
+div:has(> div > canvas) {
+  --offset: 70px;
+  height: calc(100vh + var(--offset)) !important;
+  .text-center:has(> p) {
+    position: relative;
+    bottom: 50px;
+  }
+}
+
+section#projects {
+  padding-top: 0 !important;
+}
